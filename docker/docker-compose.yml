@@ -1,0 +1,64 @@
+# README: нужно положить папку local_server в папку с проектом. Также необходимо прописать в nginx_php/site.conf правильный nginx конфиг для вашего проекта.
+# README: Настройка PHPSTORM xdebug: 
+
+# server IDE key(session ID): PHPSTORM
+# Host: _
+# Port: 8080
+# Маппинг файлов: слева абс путь к вашему проекту локально, справа путь /var/www/site
+
+version: "3.7"
+
+services:
+
+  # nginx service configuration. Use "alpine" versions because it has very small volumes
+  # WARNING: you can't use apt-get commands in alpine containers, so use it only if you want fully standard functionality
+  nginx_php:
+      #container_name: ${APPNAME}_nginx_php
+      build: ./nginx_php/
+      working_dir: /var/www/site
+      ports:
+      - 80:8080 #host:container
+      volumes:
+      - ./..:/var/www/site
+      - ./nginx_php/php.ini:/etc/php7/conf.d/custom.ini
+      - ./nginx_php/nginx.conf:/etc/nginx/nginx.conf
+      # Подставить в левую часть правильный файл конфиг, правую часть не трогать
+      - ./nginx_php/thinkphp.conf:/etc/nginx/sites-enabled/site.conf # local site configuration
+      links:
+      - db
+      # раскомментить сервисы ниже, в случае, если они включены ВНУТРИ данного docker-compose.yml
+      #- redis
+      #- memcached
+      #
+      # раскоментить для подключения доп сервисов, включенных ВНЕ данного docker-compose.yml
+      #external_links:
+      #- redis
+      #- memcached
+      restart: always
+
+  # you can connect to mysql from php code or from another container with "db:3306" because this container has DNS name "db"
+  # you can connect to mysql from localhost (with programs like SQL Workbench) with localhost:3306
+  db:
+    image: mysql:5.7
+    #container_name: ${APPNAME}_mysql
+    ports:
+    - 3306:3306 #host:container, нужен для доступа к бд извне
+    volumes:
+    - ./database/db_file:/var/lib/mysql
+    working_dir: /var/www
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: queen
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    
+#  memcached:
+#    container_name: ${APPNAME}_memcached
+#    image: memcached:1.5.16-alpine
+
+#  redis:
+#    container_name: ${APPNAME}_redis
+#    image: redis:5-alpine
+  
