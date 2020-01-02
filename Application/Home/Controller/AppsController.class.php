@@ -22,7 +22,7 @@ class AppsController extends BaseController
     {
 
         $count = $this->viewModel->count();
-        $Page  = new Page($count, 2);
+        $Page  = new Page($count, 20);
         $show  = $Page->show();
 
         $where = ['active' => 1];
