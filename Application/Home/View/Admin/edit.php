@@ -24,6 +24,11 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="link">Link to image</label>
+                <input type="text" value="<?= $model['image_link'] ?>" name="image_link" class="form-control" id="image_link" aria-describedby="image_linkHelp">
+                <small id="image_linkHelp" class="form-text text-muted">Place here the link to your application.</small>
+            </div>
+            <div class="form-group">
                 <label for="link">Link to file</label>
                 <input type="text" value="<?= $model['link'] ?>" name="link" class="form-control" id="link" aria-describedby="linkHelp">
                 <small id="linkHelp" class="form-text text-muted">Place here the link to your application.</small>

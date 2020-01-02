@@ -461,7 +461,7 @@ a.button, a.tp-button, button, input[type="submit"], input[type="reset"], input[
 	overflow: hidden;
 	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .03);
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .03);
-	background-image: url(../images/box_shadow_button.png);
+	background-image: url(/images/box_shadow_button.png);
 	background-repeat: repeat-x;
 }
 a.button_js {
@@ -5184,7 +5184,7 @@ body.table-hover:not(.woocommerce-page) table tr:hover td {
 
 .counter {
 	padding: 20px;
-	background-image: url(../images/stripes/stripes_10_b.png);
+	background-image: url(/images/stripes/stripes_10_b.png);
 	text-align: center;
 	position: relative
 }
@@ -6111,7 +6111,7 @@ a.icon_bar_dribbble span.b {
 	position: absolute;
 	left: -122%;
 	top: 0;
-	background-image: url(../images/stripes/stripes_10_b.png)
+	background-image: url(/images/stripes/stripes_10_b.png)
 }
 .timeline_items li:nth-child(even) .desc:before {
 	left: auto;

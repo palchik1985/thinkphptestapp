@@ -1,8 +1,8 @@
 <?php require(__DIR__ . './../Layout/header.php'); ?>
 
-
+<!--<div class="section">-->
     <div class="container">
-        <h1>Add your app to market</h1>
+        <h2 class="title">Add new app to market</h2>
         <form action="/Admin/store" method="post" role="form">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -22,6 +22,11 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="link">Link to image</label>
+                <input type="text" name="image_link" class="form-control" id="image_link" aria-describedby="image_linkHelp">
+                <small id="image_linkHelp" class="form-text text-muted">Place here the link to your application.</small>
+            </div>
+            <div class="form-group">
                 <label for="link">Link to file</label>
                 <input type="text" name="link" class="form-control" id="link" aria-describedby="linkHelp">
                 <small id="linkHelp" class="form-text text-muted">Place here the link to your application.</small>
@@ -35,6 +40,8 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+<!--</div>-->
+
 
 
 <?php require(__DIR__ . './../Layout/footer.php'); ?>

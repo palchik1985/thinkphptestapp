@@ -1,45 +1,58 @@
 <?php require(__DIR__ . '/../Layout/header.php'); ?>
 
-    <div class="container">
-        <h1>Management of applications <small class="pull-right"><a href="/Admin/add">Add new</a></small></h1>
+    <div class="column one">
+ <span class="pull-right"><a class="icon_bar" href="/Admin/add"><span class="icon">Add new</span></a></span>
+        <h2 class="title">Management of applications </h2>
         
         <?php
         if(count($items) > 0) { ?>
-            <table class="table">
+            <table>
                 <thead>
                 <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Prompt</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Active</th>
-                    <th scope="col">Action</th>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Prompt</th>
+                    <th>Link</th>
+                    <th>Active</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($items as $item) { ?>
                     <tr>
-                        <th scope="row"><?= $item['id']?></th>
+                        <th><?= $item['id']?></th>
+                        <td><img style="height:40px;width:40px;" src="<?= $item['image_link']?>" alt="<?= $item['title']?>"></td>
                         <td><?= $item['title']?></td>
-                        <td><?= $item['prompt']?></td>
-                        <td><?= $item['link']?></td>
+                        <td><small><?= mb_substr($item['prompt'], 0, 220) ?>...</small></td>
+                        <td>
+                            <?php if($item['platform_name'] == 'Android') { ?>
+                                <a href="<?= $item['link']?>" target="_blank">Android
+                                            </a>
+                            <?php } else { ?>
+                                <a href="<?= $item['link']?>" target="_blank">iOS
+                                            </a>
+                            <?php }?>
+                        </td>
                         <td>
                             <a href="/Admin/revertState?id=<?= $item['id']?>">
                                 <?php if($item['active']) {?>
-                                    <i class="fa fa-check"></i>
+                                    <i class="fa fa-check" style="color:green;"></i>
                                 <?php } else { ?>
-                                    <i class="fa fa-times"></i>
+                                    <i class="fa fa-times" style="color:red;"></i>
                                 <?php } ?>
                             </a>
                         </td>
-                        <td>
-                            <form action="/Admin/destroy?id=<?= $item['id']?>" method="post" role="form">
-                                <div class='btn-group'>
-                                    <a href="/Admin/show?id=<?= $item['id']?>" class='btn btn-default btn-xs'><i class="fa fa-eye"></i></a>
-                                    <a href="/Admin/edit?id=<?= $item['id']?>" class='btn btn-default btn-xs'><i class="fa fa-edit"></i></a>
-                                    <button type="submit" class='btn btn-default btn-xs' onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i></button>
-                                </div>
-                            </form>
+                        <td style="min-width: 180px;">
+                            <a href="/Apps/show?id=<?= $item['id']?>" class='icon_bar icon_bar_small'>
+                                <span class="button_icon"><i class="fa fa-eye"></i></span>
+                            </a>
+                            <a href="/Admin/edit?id=<?= $item['id']?>" class='icon_bar icon_bar_small'>
+                                <span class="button_icon"><i class="fa fa-edit"></i></span>
+                            </a>
+                            <a href="/Admin/destroy?id=<?= $item['id']?>" class='icon_bar icon_bar_small' onclick="return confirm('Are you sure?')">
+                                <span class="button_icon"><i class="fa fa-trash"></i></span>
+                            </a>
                         </td>
                     </tr>
                 <?php } ?>
@@ -50,13 +63,9 @@
             <p>Currently is nothing here. Please <a href="/Admin/add">add</a> your first application</p>
         <?php } ?>
     </div>
-    <div class="container">
-        <nav aria-label="...">
-            <nav aria-label="...">
-                <?= $page ?>
-            </nav>
-        </nav>
-        
+    <div class="column one">
+        <?= $page ?>
     </div>
+    
 
 <?php require(__DIR__ . '/../Layout/footer.php'); ?>

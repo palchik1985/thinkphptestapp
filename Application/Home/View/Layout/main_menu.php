@@ -1,21 +1,43 @@
-<!-- Just an image -->
-<nav class="navbar navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul>
-            <li class="nav-item">
-                <a class="nav-link active" href="http://site.local/Admin/index">Admin Panel</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://site.local/Apps">Frontend</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!-- Header Wrapper -->
+<div id="Header_wrapper">
+    <!-- Header -->
+    <header style="min-height: 60px;">
+        <!-- Header -  Logo and Menu area -->
+        <div id="Top_bar">
+            <div class="container">
+                <div class="column one">
+                    <div class="top_bar_left clearfix">
+                        <!-- Logo-->
+                        <div class="logo">
+                            <h1><a id="logo" href="#" title="BeLanding - BeTheme"><img class="scale-with-grid" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/b4/15/1e/b4151e6a-cc60-afcb-ddd4-5df6ee45d1ff/contsched.pgyagyab.png/217x0w.png" alt="BeLanding - BeTheme" /></a></h1>
+                        </div>
+                        <!-- Main menu-->
+                        <div class="menu_wrapper">
+                            <nav id="menu">
+                                <ul id="menu-main-menu" class="menu">
+                                    <li>
+                                        <a href="/Apps"><span>Frontend Page</span></a>
+                                    </li>
+                                    <li class="current_page_item">
+                                        <a href="/Admin"><span>Admin Panel</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/add"><span>Add new app</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a class="responsive-menu-toggle" href="#"> <i class="icon-menu"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+
+
+
 

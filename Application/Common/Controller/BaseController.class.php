@@ -49,7 +49,12 @@ class BaseController extends Controller
     
     public function show()
     {
-        $this->showItem();
+        $item = $this->getById();
+        if(empty($item) || $item['active'] != 1){
+            $this->error('Application is not active!');
+        }
+        $this->assign('model', $item);
+        $this->display();
         
     }
     
@@ -76,18 +81,15 @@ class BaseController extends Controller
     
     public function destroy()
     {
-        
-        if (IS_POST) {
-            
-            if ( ! $result = $this->model->where(['id' => I('get.id')])->delete()) {
-                $this->error($this->model->getError());
-            }
-            
-            if ($result) {
-                $this->success('success!!!');
-            } else {
-                $this->error('error!!!');
-            }
+    
+        if ( ! $result = $this->model->where(['id' => I('get.id')])->delete()) {
+            $this->error($this->model->getError());
+        }
+    
+        if ($result) {
+            $this->success('success!!!');
+        } else {
+            $this->error('error!!!');
         }
         
         $this->redirect('index');
@@ -96,6 +98,9 @@ class BaseController extends Controller
     private function showItem(): void
     {
         $item = $this->getById();
+        if(empty($item)){
+            $this->error('Page is not found');
+        }
         $this->assign('model', $item);
         $this->display();
     }
@@ -106,9 +111,9 @@ class BaseController extends Controller
         if (empty($id)) {
             $this->redirect('index');
         }
-        $item = $this->model->where(['id' => $id])->limit(1)->select();
-        if (count($item) > 0) {
-            return $item[0];
+        $item = $this->model->find($id);
+        if (!empty($item)) {
+            return $item;
         }
         $this->error('error!!!');
         $this->redirect('index');
