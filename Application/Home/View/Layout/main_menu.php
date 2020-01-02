@@ -10,13 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul>
             <li class="nav-item">
-                <a class="nav-link active" href="http://site.local/Apps/add">Add</a>
+                <a class="nav-link active" href="http://site.local/Admin/index">Admin Panel</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://site.local/Apps">List</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">In develop</a>
+                <a class="nav-link" href="http://site.local/Apps">Frontend</a>
             </li>
         </ul>
     </div>

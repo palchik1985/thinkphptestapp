@@ -22,4 +22,13 @@ class MobileAppModel extends Model
         }
         return 0;
     }
+    
+    function _before_write(&$data)
+    {
+        if(IS_POST){
+            $data['active'] = $this->setActive();
+        }
+        
+        parent::_before_write($data);
+    }
 }

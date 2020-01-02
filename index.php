@@ -21,7 +21,9 @@ define('APP_DEBUG', True);
 
 define('APP_PATH','./Application/');
 
-$_SERVER['PATH_INFO'] = $_SERVER['REQUEST_URI'];
+$path = explode('?', $_SERVER['REQUEST_URI']);
+
+$_SERVER['PATH_INFO'] = $path[0];
 
 require './ThinkPHP/ThinkPHP.php';
 
