@@ -1,5 +1,11 @@
 <?php require(__DIR__ . './../Layout/header.php'); ?>
 
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+
 <!--<div class="section">-->
     <div class="container">
         <h2 class="title">Add new app to market</h2>
@@ -32,11 +38,25 @@
                 <small id="linkHelp" class="form-text text-muted">Place here the link to your application.</small>
             </div>
             <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" name="active" id="active">
+                <input type="checkbox" class="form-check-input pull-left" name="active" id="active">
                 <label class="form-check-label" for="active">Active</label>
                 <small id="activeHelp" class="form-text text-muted">Choose if your application will be active for the
                     downloading.</small>
             </div>
+            <div class="form-group">
+                <label for="verification_code">Verification</label>
+                <?php
+                ob_start();
+                $Verify = new \Think\Verify();
+                $Verify->entry();
+                $ver = base64_encode(ob_get_contents());
+                ob_end_clean();
+                echo '<img src="data:image/png;base64,'.$ver.'"/>';
+                ?>
+                <input type="text" name="verification_code" class="form-control" id="verification_code" aria-describedby="verification_codeHelp">
+                <small id="verification_codeHelp" class="form-text text-muted">Place here the link to your application.</small>
+            </div>
+            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

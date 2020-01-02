@@ -30,6 +30,11 @@ class BaseController extends Controller
         if (IS_POST) {
             
             $data = I('post.');
+    
+            $verify = new \Think\Verify();
+            if(!$verify->check($data['verification_code'])){
+                $this->error('Verification code is not valid!');
+            }
             
             if ( ! $data = $this->model->create($data)) {
                 $this->error($this->model->getError());
