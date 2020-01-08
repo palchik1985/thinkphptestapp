@@ -14,3 +14,8 @@
 
 *you can go to the nginx_php container with a command:*
 - $ docker exec -it docker_nginx_php_1 /bin/sh
+
+## start the site in browser:
+- $ sudo nano /etc/hosts
+- // add to file the **site.local** address
+- go to the browser with link: http://site.local/Admin
