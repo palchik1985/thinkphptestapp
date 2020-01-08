@@ -1,10 +1,11 @@
 **thinkphp framework 3.2.5 version and the simple project**
 
-## Instruction:
+## Instruction (currently works only for the linux/Ubuntu):
 
-**start the docker:**
+**start the docker container:**
 
 *(php version - 7.1.33, nginx newest version, composer)*
+- $ apt install docker.io docker-compose
 - $ cd ./docker
 - $ docker-compose up -d --build
 - // database sql file you can find at ./docker folder
