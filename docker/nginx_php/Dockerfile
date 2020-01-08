@@ -17,7 +17,7 @@ RUN apk --update --no-cache add php7-xdebug php7-tokenizer php7-fileinfo \
 user nobody
 
 # Add application
-WORKDIR /var/www/queen
+WORKDIR /var/www/thinkphp
 
 # Expose the port nginx is reachable on
 EXPOSE 8080

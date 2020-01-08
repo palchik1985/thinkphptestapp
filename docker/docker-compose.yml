@@ -29,11 +29,6 @@ services:
       # раскомментить сервисы ниже, в случае, если они включены ВНУТРИ данного docker-compose.yml
       #- redis
       #- memcached
-      #
-      # раскоментить для подключения доп сервисов, включенных ВНЕ данного docker-compose.yml
-      #external_links:
-      #- redis
-      #- memcached
       restart: always
 
   # you can connect to mysql from php code or from another container with "db:3306" because this container has DNS name "db"
