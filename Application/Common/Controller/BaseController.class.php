@@ -3,6 +3,7 @@
 namespace Common\Controller;
 
 use Think\Controller;
+use Think\Verify;
 
 class BaseController extends Controller
 {
@@ -21,7 +22,34 @@ class BaseController extends Controller
     
     public function edit()
     {
+        
         $this->showItem();
+    }
+    
+    private function showItem(): void
+    {
+        
+        $item = $this->getById();
+        if (empty($item)) {
+            $this->error('Page is not found');
+        }
+        $this->assign('model', $item);
+        $this->display();
+    }
+    
+    protected function getById()
+    {
+        
+        $id = I('get.id');
+        if (empty($id)) {
+            $this->redirect('index');
+        }
+        $item = $this->model->find($id);
+        if ( ! empty($item)) {
+            return $item;
+        }
+        $this->error('error!!!');
+        $this->redirect('index');
     }
     
     public function store()
@@ -30,9 +58,9 @@ class BaseController extends Controller
         if (IS_POST) {
             
             $data = I('post.');
-    
-            $verify = new \Think\Verify();
-            if(!$verify->check($data['verification_code'])){
+            
+            $verify = new Verify();
+            if ( ! $verify->check($data[ 'verification_code' ])) {
                 $this->error('Verification code is not valid!');
             }
             
@@ -54,8 +82,9 @@ class BaseController extends Controller
     
     public function show()
     {
+        
         $item = $this->getById();
-        if(empty($item) || $item['active'] != 1){
+        if (empty($item) || $item[ 'active' ] != 1) {
             $this->error('Application is not active!');
         }
         $this->assign('model', $item);
@@ -86,41 +115,17 @@ class BaseController extends Controller
     
     public function destroy()
     {
-    
+        
         if ( ! $result = $this->model->where(['id' => I('get.id')])->delete()) {
             $this->error($this->model->getError());
         }
-    
+        
         if ($result) {
             $this->success('success!!!');
         } else {
             $this->error('error!!!');
         }
         
-        $this->redirect('index');
-    }
-    
-    private function showItem(): void
-    {
-        $item = $this->getById();
-        if(empty($item)){
-            $this->error('Page is not found');
-        }
-        $this->assign('model', $item);
-        $this->display();
-    }
-    
-    protected function getById()
-    {
-        $id = I('get.id');
-        if (empty($id)) {
-            $this->redirect('index');
-        }
-        $item = $this->model->find($id);
-        if (!empty($item)) {
-            return $item;
-        }
-        $this->error('error!!!');
         $this->redirect('index');
     }
     

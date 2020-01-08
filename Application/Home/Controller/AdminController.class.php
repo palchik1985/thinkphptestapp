@@ -35,15 +35,15 @@ class AdminController extends BaseController
     
     public function revertState()
     {
-    
+        
         $item = $this->getById();
         
-        $item['active'] = (int)(!(boolean)$item['active']);
-    
+        $item[ 'active' ] = (int)( ! (boolean)$item[ 'active' ]);
+        
         if ( ! $result = $this->model->save($item)) {
             $this->error($this->model->getError());
         }
-    
+        
         if ($result) {
             $this->success('success!!!');
         } else {

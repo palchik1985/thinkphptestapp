@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
@@ -11,7 +15,7 @@
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title><?= $model['title']?>></title>
+    <title><?= $model[ 'title' ] ?>></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -62,9 +66,14 @@
                         <div class="top_bar_left clearfix">
                             <!-- Logo-->
                             <div class="logo">
-                                <h1><a id="logo" href="#" title="BeLanding - BeTheme"><img class="scale-with-grid" src="/content/landing/images/landing.png" alt="BeLanding - BeTheme" /></a></h1>
+                                <h1>
+                                    <a id="logo" href="#" title="BeLanding - BeTheme">
+                                        <img class="scale-with-grid" src="/content/landing/images/landing.png"
+                                             alt="BeLanding - BeTheme" />
+                                    </a>
+                                </h1>
                             </div>
-                            
+
                         </div>
                         <div class="top_bar_right">
                             <div class="top_bar_right_wrapper">
@@ -77,35 +86,110 @@
             <!-- Revolution slider area-->
             <div class="mfn-main-slider">
                 <div id="rev_slider_1_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container sections_style_1">
-                    <div id="rev_slider_1_2" class="rev_slider fullwidthabanner tp-overflow-hidden" data-version="5.0.4.1">
+                    <div id="rev_slider_1_2" class="rev_slider fullwidthabanner tp-overflow-hidden"
+                         data-version="5.0.4.1">
                         <ul>
-                            <li data-index="rs-1" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
-                                <img src="/content/landing/images/home_slide-landing-bg.jpg" alt="" width="1920" height="692" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-1" data-x="center" data-hoffset="262" data-y="center" data-voffset="29" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="3100" data-responsive_offset="on" style="z-index: 5;"><img src="/content/landing/images/home_slide-landing-8.png" alt="" width="732" height="641" data-no-retina>
+                            <li data-index="rs-1" data-transition="fade" data-slotamount="7" data-easein="default"
+                                data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off"
+                                data-title="Slide" data-description="">
+                                <img src="/content/landing/images/home_slide-landing-bg.jpg" alt="" width="1920"
+                                     height="692" data-bgposition="center top" data-bgfit="cover"
+                                     data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-1" data-x="center"
+                                     data-hoffset="262" data-y="center" data-voffset="29" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="3100" data-responsive_offset="on"
+                                     style="z-index: 5;"><img src="/content/landing/images/home_slide-landing-8.png"
+                                                              alt="" width="732" height="641" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-2" data-x="center" data-hoffset="255" data-y="center" data-voffset="-33" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="2800" data-responsive_offset="on" style="z-index: 6;"><img src="/content/landing/images/home_slide-landing-7.png" alt="" width="634" height="458" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-2" data-x="center"
+                                     data-hoffset="255" data-y="center" data-voffset="-33" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="2800" data-responsive_offset="on"
+                                     style="z-index: 6;"><img src="/content/landing/images/home_slide-landing-7.png"
+                                                              alt="" width="634" height="458" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-3" data-x="center" data-hoffset="193" data-y="center" data-voffset="45" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="2500" data-responsive_offset="on" style="z-index: 7;"><img src="/content/landing/images/home_slide-landing-6.png" alt="" width="793" height="483" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-3" data-x="center"
+                                     data-hoffset="193" data-y="center" data-voffset="45" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="2500" data-responsive_offset="on"
+                                     style="z-index: 7;"><img src="/content/landing/images/home_slide-landing-6.png"
+                                                              alt="" width="793" height="483" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-4" data-x="center" data-hoffset="256" data-y="center" data-voffset="7" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="2200" data-responsive_offset="on" style="z-index: 8;"><img src="/content/landing/images/home_slide-landing-5.png" alt="" width="680" height="524" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-4" data-x="center"
+                                     data-hoffset="256" data-y="center" data-voffset="7" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="2200" data-responsive_offset="on"
+                                     style="z-index: 8;"><img src="/content/landing/images/home_slide-landing-5.png"
+                                                              alt="" width="680" height="524" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-5" data-x="center" data-hoffset="440" data-y="center" data-voffset="-22" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="1900" data-responsive_offset="on" style="z-index: 9;"><img src="/content/landing/images/home_slide-landing-4.png" alt="" width="328" height="444" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-5" data-x="center"
+                                     data-hoffset="440" data-y="center" data-voffset="-22" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="1900" data-responsive_offset="on"
+                                     style="z-index: 9;"><img src="/content/landing/images/home_slide-landing-4.png"
+                                                              alt="" width="328" height="444" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-6" data-x="center" data-hoffset="222" data-y="center" data-voffset="-37" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="1600" data-responsive_offset="on" style="z-index: 10;"><img src="/content/landing/images/home_slide-landing-3.png" alt="" width="459" height="287" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-6" data-x="center"
+                                     data-hoffset="222" data-y="center" data-voffset="-37" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="1600" data-responsive_offset="on"
+                                     style="z-index: 10;"><img src="/content/landing/images/home_slide-landing-3.png"
+                                                               alt="" width="459" height="287" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-7" data-x="center" data-hoffset="129" data-y="center" data-voffset="-116" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;" data-transform_out="auto:auto;s:300;" data-start="1300" data-responsive_offset="on" style="z-index: 11;"><img src="/content/landing/images/home_slide-landing-2.png" alt="" width="390" height="381" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-7" data-x="center"
+                                     data-hoffset="129" data-y="center" data-voffset="-116" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:1;s:500;e:Bounce.easeOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="1300" data-responsive_offset="on"
+                                     style="z-index: 11;"><img src="/content/landing/images/home_slide-landing-2.png"
+                                                               alt="" width="390" height="381" data-no-retina>
                                 </div>
-                                <div class="tp-caption tp-resizeme" id="slide-1-layer-8" data-x="center" data-hoffset="260" data-y="bottom" data-voffset="220" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="y:bottom;s:1000;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="1500" data-responsive_offset="on" style="z-index: 12;"><img src="<?= $model['image_link']?>" alt="" width="528" height="607" data-no-retina>
+                                <div class="tp-caption tp-resizeme" id="slide-1-layer-8" data-x="center"
+                                     data-hoffset="260" data-y="bottom" data-voffset="220" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="y:bottom;s:1000;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="1500" data-responsive_offset="on"
+                                     style="z-index: 12;"><img src="<?= $model[ 'image_link' ] ?>" alt="" width="528"
+                                                               height="607" data-no-retina>
                                 </div>
-                                <div class="tp-caption mfnrs_landing tp-resizeme" id="slide-1-layer-9" data-x="center" data-hoffset="-361" data-y="center" data-voffset="-9" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="y:top;s:800;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="3100" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 13; min-width: auto; min-height: auto; white-space: nowrap; max-width: auto; max-height: auto; font-size: 50px; line-height: 54px; font-weight: 200; color: rgba(209, 194, 204, 1.00);font-family:Lato;border-color:rgba(64, 67, 69, 1.00);">
-                                    <?= $model['title']?>
+                                <div class="tp-caption mfnrs_landing tp-resizeme" id="slide-1-layer-9" data-x="center"
+                                     data-hoffset="-361" data-y="center" data-voffset="-9" data-width="auto"
+                                     data-height="auto" data-transform_idle=""
+                                     data-transform_in="y:top;s:800;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:300;" data-start="3100" data-splitin="none"
+                                     data-splitout="none" data-responsive_offset="on"
+                                     style="z-index: 13; min-width: auto; min-height: auto; white-space: nowrap; max-width: auto; max-height: auto; font-size: 50px; line-height: 54px; font-weight: 200; color: rgba(209, 194, 204, 1.00);font-family:Lato;border-color:rgba(64, 67, 69, 1.00);">
+                                    <?= $model[ 'title' ] ?>
                                     <br> is the best way
                                     <br> to your satisfaction
                                 </div>
-                                <?php if($model['platform_id'] == 1){ ?>
-                                    <div class="tp-caption tp-resizeme" id="slide-1-layer-10" data-x="center" data-hoffset="-460" data-y="center" data-voffset="210" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:-50px;opacity:0;s:800;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="3400" data-responsive_offset="on" style="z-index: 14;"><a href="<?= $model['link']?>" target="_blank"><img src="/content/landing/images/home_landing_button_googleplay.png" alt="" width="196" height="50" data-no-retina></a></div>
+                                <?php if ($model[ 'platform_id' ] == 1) { ?>
+                                    <div class="tp-caption tp-resizeme" id="slide-1-layer-10" data-x="center"
+                                         data-hoffset="-460" data-y="center" data-voffset="210" data-width="auto"
+                                         data-height="auto" data-transform_idle=""
+                                         data-transform_in="x:-50px;opacity:0;s:800;e:Power3.easeInOut;"
+                                         data-transform_out="auto:auto;s:300;" data-start="3400"
+                                         data-responsive_offset="on" style="z-index: 14;"><a
+                                                href="<?= $model[ 'link' ] ?>" target="_blank"><img
+                                                    src="/content/landing/images/home_landing_button_googleplay.png"
+                                                    alt="" width="196" height="50" data-no-retina></a></div>
                                 <?php } else { ?>
-                                    <div class="tp-caption tp-resizeme" id="slide-1-layer-11" data-x="center" data-hoffset="-250" data-y="center" data-voffset="210" data-width="auto" data-height="auto" data-transform_idle="" data-transform_in="x:50px;opacity:0;s:800;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="3400" data-responsive_offset="on" style="z-index: 15;"><a href="<?= $model['link']?>" target="_blank"><img src="/content/landing/images/home_landing_button_appstore.png" alt="" width="178" height="50" data-no-retina></a></div>
+                                    <div class="tp-caption tp-resizeme" id="slide-1-layer-11" data-x="center"
+                                         data-hoffset="-250" data-y="center" data-voffset="210" data-width="auto"
+                                         data-height="auto" data-transform_idle=""
+                                         data-transform_in="x:50px;opacity:0;s:800;e:Power3.easeInOut;"
+                                         data-transform_out="auto:auto;s:300;" data-start="3400"
+                                         data-responsive_offset="on" style="z-index: 15;"><a
+                                                href="<?= $model[ 'link' ] ?>" target="_blank"><img
+                                                    src="/content/landing/images/home_landing_button_appstore.png"
+                                                    alt="" width="178" height="50" data-no-retina></a></div>
                                 <?php } ?>
                             </li>
                         </ul>
@@ -127,10 +211,11 @@
                                 <!-- One full width row-->
                                 <div class="column one column_fancy_heading">
                                     <div class="fancy_heading fancy_heading_arrows">
-                                        <h2 class="title"><i class="icon-right-dir"></i>Accomplish more with <?= $model['title']?><i class="icon-left-dir"></i></h2>
+                                        <h2 class="title"><i class="icon-right-dir"></i>Accomplish more
+                                            with <?= $model[ 'title' ] ?><i class="icon-left-dir"></i></h2>
                                         <div class="inside">
-                                            <?php $prompt = nl2br($model['prompt'])?>
-                                                <span><?= $prompt ?></span>
+                                            <?php $prompt = nl2br($model[ 'prompt' ]) ?>
+                                            <span><?= $prompt ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +225,9 @@
                                     <div class="animate" data-anim-type="fadeInLeft">
                                         <div class="icon_box icon_position_top has_border">
                                             <a href="#">
-                                                <div class="image_wrapper"><img src="/content/landing/images/home_landing_box_1.png" alt="User friendly" class="scale-with-grid" />
+                                                <div class="image_wrapper"><img
+                                                            src="/content/landing/images/home_landing_box_1.png"
+                                                            alt="User friendly" class="scale-with-grid" />
                                                 </div>
                                                 <div class="desc_wrapper">
                                                     <h4>User friendly</h4>
@@ -155,7 +242,9 @@
                                     <div class="animate" data-anim-type="fadeInDown">
                                         <div class="icon_box icon_position_top has_border">
                                             <a href="#">
-                                                <div class="image_wrapper"><img src="/content/landing/images/home_landing_box_2.png" alt="Retina ready" class="scale-with-grid" />
+                                                <div class="image_wrapper"><img
+                                                            src="/content/landing/images/home_landing_box_2.png"
+                                                            alt="Retina ready" class="scale-with-grid" />
                                                 </div>
                                                 <div class="desc_wrapper">
                                                     <h4>Retina ready</h4>
@@ -170,7 +259,9 @@
                                     <div class="animate" data-anim-type="fadeInDown">
                                         <div class="icon_box icon_position_top has_border">
                                             <a href="#">
-                                                <div class="image_wrapper"><img src="/content/landing/images/home_landing_box_3.png" alt="Save money" class="scale-with-grid" />
+                                                <div class="image_wrapper"><img
+                                                            src="/content/landing/images/home_landing_box_3.png"
+                                                            alt="Save money" class="scale-with-grid" />
                                                 </div>
                                                 <div class="desc_wrapper">
                                                     <h4>Save money</h4>
@@ -185,7 +276,9 @@
                                     <div class="animate" data-anim-type="fadeInRight">
                                         <div class="icon_box icon_position_top no_border">
                                             <a href="#">
-                                                <div class="image_wrapper"><img src="/content/landing/images/home_landing_box_4.png" alt="Outstanding support" class="scale-with-grid" />
+                                                <div class="image_wrapper"><img
+                                                            src="/content/landing/images/home_landing_box_4.png"
+                                                            alt="Outstanding support" class="scale-with-grid" />
                                                 </div>
                                                 <div class="desc_wrapper">
                                                     <h4>Outstanding support</h4>
@@ -204,7 +297,9 @@
                                     <!-- Animated area -->
                                     <div class="animate" data-anim-type="zoomIn">
                                         <div class="image_frame no_link scale-with-grid no_border aligncenter">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="/content/landing/images/home_landing_pic_1.jpg" alt="">
+                                            <div class="image_wrapper"><img class="scale-with-grid"
+                                                                            src="/content/landing/images/home_landing_pic_1.jpg"
+                                                                            alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +308,7 @@
                                 <div class="column one-second column_column">
                                     <div class="column_attr animate" data-anim-type="fadeInRightLarge">
                                         <div style="margin: 50px 50px 0;">
-                                            <h2><?= $model['title']?>: Possibilities</h2>
+                                            <h2><?= $model[ 'title' ] ?>: Possibilities</h2>
                                             <p>
                                                 <span>Turn on your creativity and create exceptional websites. Any color, layout or font you want can be changed from Muffin Options section within seconds. You do not need to be coder or developer to create good looking website...</span>
                                             </p>
@@ -230,7 +325,7 @@
                                 <div class="column one-second column_column">
                                     <div class="column_attr animate" data-anim-type="fadeInLeftLarge">
                                         <div style="margin: 50px 50px 0;">
-                                            <h2><?= $model['title']?>: Easy of use </h2>
+                                            <h2><?= $model[ 'title' ] ?>: Easy of use </h2>
                                             <p>
                                                 <span>We guarantee that you have never had contact with the product easier to use. Be|theme is one of the best and easiest themes in use. Everything can be done within one click and you don`t need to waste time on thinking about...</span>
                                             </p>
@@ -243,7 +338,9 @@
                                     <!-- Animated area -->
                                     <div class="animate" data-anim-type="zoomIn">
                                         <div class="image_frame no_link scale-with-grid no_border aligncenter">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="/content/landing/images/home_landing_pic_2.jpg" alt="">
+                                            <div class="image_wrapper"><img class="scale-with-grid"
+                                                                            src="/content/landing/images/home_landing_pic_2.jpg"
+                                                                            alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -251,7 +348,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section" style="padding-top:0px; padding-bottom:20px; background-color:#fff; background-image:url(/content/landing/images/landing_section.jpg); background-repeat:no-repeat; background-position:center top; ">
+                    <div class="section"
+                         style="padding-top:0px; padding-bottom:20px; background-color:#fff; background-image:url(/content/landing/images/landing_section.jpg); background-repeat:no-repeat; background-position:center top; ">
                         <div class="section_wrapper clearfix">
                             <div class="items_group clearfix">
                                 <!-- One full width row-->
@@ -259,7 +357,9 @@
                                     <!-- Animated area -->
                                     <div class="animate" data-anim-type="bounceIn">
                                         <div class="image_frame no_link scale-with-grid no_border aligncenter">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="/content/landing/images/landing_people.png" alt="">
+                                            <div class="image_wrapper"><img class="scale-with-grid"
+                                                                            src="/content/landing/images/landing_people.png"
+                                                                            alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -268,17 +368,21 @@
                                 <!-- One full width row-->
                                 <div class="column one column_fancy_heading">
                                     <div class="fancy_heading fancy_heading_icon">
-                                        <h2 class="title">Have fun with <?= $model['title']?></h2>
+                                        <h2 class="title">Have fun with <?= $model[ 'title' ] ?></h2>
                                         <div class="inside">
                                             <p>
                                                 <span>From now, building websites will be fun and not work. You never won`t change to anything else after trying this amazing product.</span>
                                             </p>
-                                            <?php if($model['platform_id'] == 1){ ?>
-                                            <a href="<?= $model['link']?>" target="_blank"><img src="/content/landing/images/home_landing_button_googleplay.png" alt="">
-                                            </a>
+                                            <?php if ($model[ 'platform_id' ] == 1) { ?>
+                                                <a href="<?= $model[ 'link' ] ?>" target="_blank"><img
+                                                            src="/content/landing/images/home_landing_button_googleplay.png"
+                                                            alt="">
+                                                </a>
                                             <?php } else { ?>
-                                            <a href="<?= $model['link']?>" target="_blank"><img src="/content/landing/images/home_landing_button_appstore.png" alt="">
-                                            </a>
+                                                <a href="<?= $model[ 'link' ] ?>" target="_blank"><img
+                                                            src="/content/landing/images/home_landing_button_appstore.png"
+                                                            alt="">
+                                                </a>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -331,9 +435,11 @@
         <div class="footer_copy">
             <div class="container">
                 <div class="column one">
-                    <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
+                    <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i
+                                    class="icon-up-open-big"></i></span></a>
                     <div class="copyright">
-                        &copy; 2019 HTML by <a target="_blank" rel="nofollow" href="http://bit.ly/1M6lijQ">Palchik Andrey</a>
+                        &copy; 2019 HTML by <a rel="nofollow" href="#">Palchik
+                            Andrey</a>
                     </div>
                     <!--Social info area-->
                     <ul class="social column one-fourth">
@@ -376,7 +482,7 @@
     var tpj = jQuery;
     tpj.noConflict();
     var revapi1;
-    tpj(document).ready(function() {
+    tpj(document).ready(function () {
         if (tpj("#rev_slider_1_2").revolution == undefined) {
             revslider_showDoubleJqueryError("#rev_slider_1_2");
         } else {
@@ -426,7 +532,7 @@
 </script>
 
 <script>
-    jQuery(window).load(function() {
+    jQuery(window).load(function () {
         var retina = window.devicePixelRatio > 1 ? true : false;
         if (retina) {
             var retinaEl = jQuery("#logo img");

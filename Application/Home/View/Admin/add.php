@@ -1,4 +1,6 @@
-<?php require(__DIR__ . './../Layout/header.php'); ?>
+<?php use Think\Verify;
+
+require(__DIR__ . './../Layout/header.php'); ?>
 
     <style>
         .form-group {
@@ -6,7 +8,7 @@
         }
     </style>
 
-<!--<div class="section">-->
+    <!--<div class="section">-->
     <div class="container">
         <h2 class="title">Add new app to market</h2>
         <form action="/Admin/store" method="post" role="form">
@@ -17,7 +19,8 @@
             </div>
             <div class="form-group">
                 <label for="prompt">Prompt</label>
-                <textarea class="form-control" id="prompt" name="prompt" rows="3" aria-describedby="promptHelp"></textarea>
+                <textarea class="form-control" id="prompt" name="prompt" rows="3"
+                          aria-describedby="promptHelp"></textarea>
                 <small id="promptHelp" class="form-text text-muted">Fill the description of your application.</small>
             </div>
             <div class="form-group">
@@ -29,7 +32,8 @@
             </div>
             <div class="form-group">
                 <label for="link">Link to image</label>
-                <input type="text" name="image_link" class="form-control" id="image_link" aria-describedby="image_linkHelp">
+                <input type="text" name="image_link" class="form-control" id="image_link"
+                       aria-describedby="image_linkHelp">
                 <small id="image_linkHelp" class="form-text text-muted">Place here the link to your application.</small>
             </div>
             <div class="form-group">
@@ -46,22 +50,24 @@
             <div class="form-group">
                 <label for="verification_code">Verification</label>
                 <?php
+                // for the right captcha rendering
                 ob_start();
-                $Verify = new \Think\Verify();
+                $Verify = new Verify();
                 $Verify->entry();
                 $ver = base64_encode(ob_get_contents());
                 ob_end_clean();
-                echo '<img src="data:image/png;base64,'.$ver.'"/>';
+                echo '<img src="data:image/png;base64,' . $ver . '"/>';
                 ?>
-                <input type="text" name="verification_code" class="form-control" id="verification_code" aria-describedby="verification_codeHelp">
-                <small id="verification_codeHelp" class="form-text text-muted">Place here the link to your application.</small>
+                <input type="text" name="verification_code" class="form-control" id="verification_code"
+                       aria-describedby="verification_codeHelp">
+                <small id="verification_codeHelp" class="form-text text-muted">Place here the link to your
+                    application.</small>
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-<!--</div>-->
-
+    <!--</div>-->
 
 
 <?php require(__DIR__ . './../Layout/footer.php'); ?>
