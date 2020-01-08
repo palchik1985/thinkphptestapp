@@ -12,8 +12,8 @@
 // 应用入口文件
 
 // 检测PHP环境
-if (version_compare(PHP_VERSION, '5.3.0', '<')) {
-    die('require PHP > 5.3.0 !');
+if (PHP_VERSION_ID < 70100) {
+    die('require PHP > 7.1.0 !');
 }
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
@@ -21,9 +21,11 @@ define('APP_DEBUG', True);
 
 define('APP_PATH','./Application/');
 
-$path = explode('?', $_SERVER['REQUEST_URI']);
 
+// fix the PATH_INFO error, for the routing functionality
+$path = explode('?', $_SERVER['REQUEST_URI']);
 $_SERVER['PATH_INFO'] = $path[0];
+
 
 require './ThinkPHP/ThinkPHP.php';
 
